@@ -21,18 +21,18 @@ import TeamItem from "./team-item";
         avatar:'https://ui.shadcn.com/avatars/02.png',
         name: 'Jackson Lee',
         email: 'jackson@email.com',
-        role: 'member'
+        role: 'viewer'
     }
 ]
 
 export default function TeamArea() {
     return (
-        <Card>
+        <Card className="w-full max-w-2xl">
             <CardHeader>
                 <CardTitle>Team Members</CardTitle>
                 <CardDescription>Invite your team members to collaborate.</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex flex-col gap-4">
                 {   members.map((item)=>{
                     return( 
                         <TeamItem key={item.id} data={item}/>
